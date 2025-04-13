@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import clsx from "clsx"; // optional: untuk className helper
+import clsx from "clsx";
 
 import {
   Sidebar,
@@ -53,23 +53,22 @@ const menuItems = [
 ];
 
 export function AppSidebar() {
-  const pathname = usePathname(); // Mendapatkan path sekarang untuk menentukan menu yang aktif
+  const pathname = usePathname();
 
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          {/* Profile Section */}
           <SidebarGroupContent className="flex flex-col items-center py-8 px-4 mb-2 border-b-4">
             <div className="h-20 w-20 overflow-hidden rounded-full">
               <Image
-                src="/image/foto-saya.jpg" 
+                src="/image/foto-saya.jpg"
                 alt="Profile Photo"
                 width={128}
                 height={128}
                 className="object-cover"
-                priority 
-                loading="eager" 
+                priority
+                loading="eager"
               />
             </div>
 
@@ -77,7 +76,6 @@ export function AppSidebar() {
             <p className="text-gray-500">Web Developer</p>
           </SidebarGroupContent>
 
-          {/* Navigation Menu */}
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => {
