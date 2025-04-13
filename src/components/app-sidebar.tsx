@@ -3,9 +3,12 @@
 import {
   Home,
   User,
+  FileBadge,
   Briefcase,
-  FileText,
+  Code2,
   Mail,
+  BookText,
+  BadgeCheck,
   Github,
   Linkedin,
 } from "lucide-react";
@@ -24,7 +27,7 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 
-const menuItems = [
+export const menuItems = [
   {
     title: "Home",
     url: "/home",
@@ -36,19 +39,30 @@ const menuItems = [
     icon: User,
   },
   {
-    title: "Portfolio",
-    url: "#portfolio",
-    icon: Briefcase,
+    title: "Skill",
+    url: "#skill",
+    icon: FileBadge,
   },
   {
-    title: "Resume",
-    url: "#resume",
-    icon: FileText,
+    title: "Portfolio",
+    url: "#portfolio",
+    icon: Code2,
   },
+
   {
     title: "Contact",
     url: "#contact",
     icon: Mail,
+  },
+  {
+    title: "Blog",
+    url: "#blog",
+    icon: BookText,
+  },
+  {
+    title: "Certificate",
+    url: "#certificate",
+    icon: BadgeCheck, // Cocok untuk sertifikasi atau pencapaian
   },
 ];
 
