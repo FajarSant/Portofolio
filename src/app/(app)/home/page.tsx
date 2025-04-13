@@ -16,16 +16,20 @@ const images = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center px-4 md:px-10 py-12">
+   
+
+
+      {/* Main Content */}
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Kiri: Deskripsi Diri */}
-        <motion.div 
-          className="space-y-8" 
+        <motion.div
+          className="space-y-8"
           initial={{ opacity: 0, y: 50 }} // Animasi awal
           animate={{ opacity: 1, y: 0 }} // Animasi akhir
           transition={{ duration: 1 }} // Durasi animasi
         >
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 leading-tight tracking-tight">
-            Halo, saya <br />
+            Halo, Perkenalkan saya <br />
             <TypingText
               words={['Fajar Santoso']}
               loop={1}
@@ -62,10 +66,10 @@ export default function Home() {
         </motion.div>
 
         {/* Kanan: Swiper Foto */}
-        <motion.div 
-          className="flex justify-center md:justify-end" 
+        <motion.div
+          className="flex justify-center md:justify-end"
           initial={{ opacity: 0, x: 50 }} // Animasi awal
-          animate={{ opacity: 1, x: 0 }}  // Animasi akhir
+          animate={{ opacity: 1, x: 0 }} // Animasi akhir
           transition={{ duration: 1 }} // Durasi animasi
         >
           <div className="overflow-hidden p-4 w-full max-w-md sm:max-w-lg">
