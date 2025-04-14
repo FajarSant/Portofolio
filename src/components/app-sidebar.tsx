@@ -4,7 +4,6 @@ import {
   Home,
   User,
   FileBadge,
-  Briefcase,
   Code2,
   Mail,
   BookText,
