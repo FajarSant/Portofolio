@@ -38,8 +38,8 @@ export const menuItems = [
     icon: User,
   },
   {
-    title: "Skill",
-    url: "#skill",
+    title: "Skills",
+    url: "/skills",
     icon: FileBadge,
   },
   {
