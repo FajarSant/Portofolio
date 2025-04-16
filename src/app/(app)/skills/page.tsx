@@ -98,7 +98,7 @@ const Skills = () => {
       content: "Membangun REST API dan integrasi database MongoDB.",
       footer: "Backend Developer",
       icon: <FaNodeJs className="text-green-600 w-6 h-6" />,
-      progress: 80, // Progress untuk Node.js
+      progress: 80,
     },
   ];
 
@@ -109,7 +109,6 @@ const Skills = () => {
       content: "Menggunakan Git & GitHub untuk kolaborasi dan deployment.",
       footer: "Versioning",
       icon: <FaGitAlt className="text-red-500 w-6 h-6" />,
-      progress: 95, // Progress untuk Git
     },
     {
       title: "PostgreSQL",
@@ -118,7 +117,6 @@ const Skills = () => {
         "Menggunakan PostgreSQL untuk pengelolaan data yang aman dan terstruktur.",
       footer: "Database Tool",
       icon: <SiPostgresql className="text-blue-600 w-6 h-6" />,
-      progress: 70, // Progress untuk PostgreSQL
     },
     {
       title: "Firebase",
@@ -126,7 +124,6 @@ const Skills = () => {
       content: "Menggunakan Firebase untuk autentikasi, database, dan hosting.",
       footer: "Realtime Backend",
       icon: <IoLogoFirebase className="text-yellow-500 w-6 h-6" />,
-      progress: 80, // Progress untuk Firebase
     },
     {
       title: "Prisma",
@@ -135,7 +132,6 @@ const Skills = () => {
         "Menggunakan Prisma untuk berinteraksi dengan database secara efisien.",
       footer: "ORM Tool",
       icon: <SiPrisma className="text-purple-600 w-6 h-6" />,
-      progress: 60, // Progress untuk Prisma
     },
     {
       title: "Figma",
@@ -143,7 +139,6 @@ const Skills = () => {
       content: "Bekerja dengan tim UI/UX menggunakan Figma.",
       footer: "Design Tool",
       icon: <IoLogoFigma className="text-purple-500 w-6 h-6" />,
-      progress: 85, // Progress untuk Figma
     },
     {
       title: "Vercel",
@@ -152,7 +147,6 @@ const Skills = () => {
         "Menggunakan Vercel untuk hosting dan deployment aplikasi Next.js.",
       footer: "Deployment Tool",
       icon: <IoLogoVercel className="text-black w-6 h-6" />,
-      progress: 90, // Progress untuk Vercel
     },
   ];
 
@@ -219,13 +213,6 @@ const Skills = () => {
                       <p className="text-sm text-center text-blue-600 italic mt-auto">
                         {skill.footer}
                       </p>
-                      <div>
-                        <span>{skill.progress}%</span>
-                        <Progress
-                          value={skill.progress}
-                          className="h-2 bg-blue-100 [&>div]:bg-blue-600 rounded-full"
-                        />
-                      </div>
                     </Card>
                   </AccordionContent>
                 </AccordionItem>
