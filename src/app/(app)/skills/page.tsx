@@ -11,7 +11,6 @@ import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { IoLogoFigma, IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
 
 import {
-  SiGraphql,
   SiHtml5,
   SiJavascript,
   SiNestjs,
@@ -19,10 +18,7 @@ import {
   SiPostgresql,
   SiPrisma,
   SiTailwindcss,
-  SiTypescript,
-  SiVuedotjs,
 } from "react-icons/si";
-import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
   const [selectedTab, setSelectedTab] = useState<"tech" | "tools">("tech");
