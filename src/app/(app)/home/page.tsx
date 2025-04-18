@@ -6,11 +6,11 @@ import { motion } from 'framer-motion'; // Import framer motion
 
 const images = [
   '/images/foto-saya.jpg',
+  '/images/foto-saya-1.jpg',
+  '/images/foto-saya-2.jpg',
   '/images/foto-saya.jpg',
-  '/images/foto-saya.jpg',
-  '/images/foto-saya.jpg',
-  '/images/foto-saya.jpg',
-  '/images/foto-saya.jpg',
+  '/images/foto-saya-1.jpg',
+  '/images/foto-saya-2.jpg',
 ];
 
 export default function Home() {
