@@ -75,7 +75,7 @@ export function AppSidebar() {
           <SidebarGroupContent className="flex flex-col items-center py-8 px-4 mb-2 border-b-4">
             <div className="h-20 w-20 overflow-hidden rounded-full">
               <Image
-                src="/images/foto-saya.jpg"
+                src="/images/foto-saya.png"
                 alt="Profile Photo"
                 width={128}
                 height={128}
