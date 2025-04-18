@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   Accordion,
@@ -7,9 +8,17 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { IoLogoFigma, IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
-
+import { motion } from "framer-motion";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  IoLogoFigma,
+  IoLogoFirebase,
+  IoLogoVercel,
+} from "react-icons/io5";
 import {
   SiHtml5,
   SiJavascript,
@@ -27,58 +36,50 @@ const Skills = () => {
     {
       title: "HTML",
       description: "Pengembangan web dengan HTML.",
-      content:
-        "Mempunyai pengalaman dalam strukturisasi halaman web menggunakan HTML5.",
+      content: "Mempunyai pengalaman dalam strukturisasi halaman web menggunakan HTML5.",
       footer: "Bahasa Pemograman",
       icon: <SiHtml5 className="text-orange-500 w-6 h-6" />,
-      progress: 90, // Progress untuk HTML
+      progress: 90,
     },
     {
       title: "JavaScript",
       description: "Pengembangan web front-end dengan JavaScript.",
-      content:
-        "Mempunyai pengalaman dalam pengembangan aplikasi web dinamis dan interaktif.",
+      content: "Mempunyai pengalaman dalam pengembangan aplikasi web dinamis dan interaktif.",
       footer: "Bahasa Pemograman",
       icon: <SiJavascript className="text-yellow-500 w-6 h-6" />,
-      progress: 80, // Progress untuk JavaScript
+      progress: 80,
     },
     {
       title: "React",
       description: "Pengembangan aplikasi dengan React.js.",
-      content:
-        "Menguasai konsep React seperti hooks, state management, dan komponen reusable.",
+      content: "Menguasai konsep React seperti hooks, state management, dan komponen reusable.",
       footer: "React Developer",
       icon: <FaReact className="text-blue-500 w-6 h-6" />,
-      progress: 70, // Progress untuk React
+      progress: 70,
     },
     {
       title: "React Native",
       description: "Pengembangan aplikasi mobile menggunakan React Native.",
-      content:
-        "Membangun aplikasi mobile dengan React Native untuk iOS dan Android.",
+      content: "Membangun aplikasi mobile dengan React Native untuk iOS dan Android.",
       footer: "Mobile Developer",
       icon: <FaReact className="text-blue-500 w-6 h-6" />,
-      progress: 60, // Progress untuk React Native
+      progress: 60,
     },
     {
       title: "Next.js",
-      description:
-        "Framework React untuk pengembangan aplikasi dengan server-side rendering.",
-      content:
-        "Membangun aplikasi web yang cepat dan SEO-friendly dengan Next.js.",
+      description: "Framework React untuk pengembangan aplikasi dengan server-side rendering.",
+      content: "Membangun aplikasi web yang cepat dan SEO-friendly dengan Next.js.",
       footer: "Next.js Developer",
       icon: <SiNextdotjs className="text-black w-6 h-6" />,
-      progress: 85, // Progress untuk Next.js
+      progress: 85,
     },
     {
       title: "NestJS",
-      description:
-        "Backend development dengan NestJS, framework untuk Node.js.",
-      content:
-        "Membangun aplikasi server-side menggunakan arsitektur modular dan TypeScript.",
+      description: "Backend development dengan NestJS, framework untuk Node.js.",
+      content: "Membangun aplikasi server-side menggunakan arsitektur modular dan TypeScript.",
       footer: "Backend Developer",
-      icon: <SiNestjs className="text-e50000 w-6 h-6" />,
-      progress: 75, // Progress untuk NestJS
+      icon: <SiNestjs className="text-red-600 w-6 h-6" />,
+      progress: 75,
     },
     {
       title: "Tailwind CSS",
@@ -86,7 +87,7 @@ const Skills = () => {
       content: "Mendesain antarmuka modern dengan performa optimal.",
       footer: "Frontend Developer",
       icon: <SiTailwindcss className="text-sky-500 w-6 h-6" />,
-      progress: 90, // Progress untuk Tailwind CSS
+      progress: 90,
     },
     {
       title: "Node.js",
@@ -109,8 +110,7 @@ const Skills = () => {
     {
       title: "PostgreSQL",
       description: "Database relational yang kuat untuk aplikasi skala besar.",
-      content:
-        "Menggunakan PostgreSQL untuk pengelolaan data yang aman dan terstruktur.",
+      content: "Menggunakan PostgreSQL untuk pengelolaan data yang aman dan terstruktur.",
       footer: "Database Tool",
       icon: <SiPostgresql className="text-blue-600 w-6 h-6" />,
     },
@@ -124,8 +124,7 @@ const Skills = () => {
     {
       title: "Prisma",
       description: "ORM (Object-Relational Mapping) untuk database di Node.js.",
-      content:
-        "Menggunakan Prisma untuk berinteraksi dengan database secara efisien.",
+      content: "Menggunakan Prisma untuk berinteraksi dengan database secara efisien.",
       footer: "ORM Tool",
       icon: <SiPrisma className="text-purple-600 w-6 h-6" />,
     },
@@ -139,8 +138,7 @@ const Skills = () => {
     {
       title: "Vercel",
       description: "Platform untuk deployment aplikasi berbasis Next.js.",
-      content:
-        "Menggunakan Vercel untuk hosting dan deployment aplikasi Next.js.",
+      content: "Menggunakan Vercel untuk hosting dan deployment aplikasi Next.js.",
       footer: "Deployment Tool",
       icon: <IoLogoVercel className="text-black w-6 h-6" />,
     },
@@ -150,46 +148,47 @@ const Skills = () => {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center px-4 md:px-10 py-12">
-      <div className="max-w-6xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="max-w-6xl w-full"
+      >
         {/* Header Section */}
         <div className="mb-10 text-center">
           <h1 className="text-4xl font-bold text-blue-700">My Skills</h1>
         </div>
 
-        {/* Accordion Grid */}
-        <div className="p-6 bg-white shadow-xl rounded-3xl">
-          <div className="flex justify-center mt-6 space-x-4">
-            <button
-              onClick={() => setSelectedTab("tech")}
-              className={`px-5 py-2 rounded-full font-semibold transition duration-200 shadow-lg transform ${
-                selectedTab === "tech"
-                  ? "bg-blue-600 text-white scale-105"
-                  : "bg-white text-blue-600 border border-blue-300 hover:bg-blue-100"
-              }`}
-            >
-              Tech Stack
-            </button>
-            <button
-              onClick={() => setSelectedTab("tools")}
-              className={`px-5 py-2 rounded-full font-semibold transition duration-200 shadow-lg transform ${
-                selectedTab === "tools"
-                  ? "bg-blue-600 text-white scale-105"
-                  : "bg-white text-blue-600 border border-blue-300 hover:bg-blue-100"
-              }`}
-            >
-              Tools
-            </button>
-          </div>
+        {/* Tab Buttons */}
+        <div className="flex justify-center mt-6 space-x-4">
+          <button
+            onClick={() => setSelectedTab("tech")}
+            className={`px-5 py-2 rounded-full font-semibold transition duration-200 shadow-lg transform ${
+              selectedTab === "tech"
+                ? "bg-blue-600 text-white scale-105"
+                : "bg-white text-blue-600 border border-blue-300 hover:bg-blue-100"
+            }`}
+          >
+            Tech Stack
+          </button>
+          <button
+            onClick={() => setSelectedTab("tools")}
+            className={`px-5 py-2 rounded-full font-semibold transition duration-200 shadow-lg transform ${
+              selectedTab === "tools"
+                ? "bg-blue-600 text-white scale-105"
+                : "bg-white text-blue-600 border border-blue-300 hover:bg-blue-100"
+            }`}
+          >
+            Tools
+          </button>
+        </div>
 
-          {/* Accordion Component */}
-          <Accordion type="single" collapsible className="mt-6">
+        {/* Accordion */}
+        <div className="mt-6 p-6 bg-white shadow-xl rounded-3xl">
+          <Accordion type="single" collapsible>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {displayedSkills.map((skill, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="w-full"
-                >
+                <AccordionItem key={index} value={`item-${index}`} className="w-full">
                   <AccordionTrigger className="w-90 px-4 py-3 bg-blue-50 rounded-xl shadow-md hover:bg-blue-100 transition">
                     <div className="flex items-center space-x-3">
                       {skill.icon}
@@ -201,9 +200,7 @@ const Skills = () => {
                   <AccordionContent>
                     <Card className="p-5 bg-gradient-to-r from-blue-50 to-blue-100 shadow-inner mt-2 min-h-[180px] flex flex-col justify-between rounded-xl border border-blue-200">
                       <div>
-                        <p className="text-gray-500 mb-2">
-                          {skill.description}
-                        </p>
+                        <p className="text-gray-500 mb-2">{skill.description}</p>
                         <p className="text-gray-700 mb-3">{skill.content}</p>
                       </div>
                       <p className="text-sm text-center text-blue-600 italic mt-auto">
@@ -216,7 +213,7 @@ const Skills = () => {
             </div>
           </Accordion>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };
