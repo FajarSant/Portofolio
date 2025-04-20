@@ -44,13 +44,13 @@ export const menuItems = [
   },
   {
     title: "Portfolio",
-    url: "#portfolio",
+    url: "/portofolio",
     icon: Code2,
   },
 
   {
-    title: "Contact",
-    url: "#contact",
+    title: "Kontak Saya",
+    url: "/kontak",
     icon: Mail,
   },
   {

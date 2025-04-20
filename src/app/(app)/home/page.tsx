@@ -1,24 +1,21 @@
-'use client';
+"use client";
 
-import ImageCardSwiper from '@/components/ImageCardSwiper';
-import TypingText from '@/components/TypingText';
-import { motion } from 'framer-motion'; // Import framer motion
+import ImageCardSwiper from "@/components/ImageCardSwiper";
+import TypingText from "@/components/TypingText";
+import { motion } from "framer-motion"; // Import framer motion
 
 const images = [
-  '/images/foto-saya.png',
-  '/images/foto-saya-1.jpg',
-  '/images/foto-saya-2.jpg',
-  '/images/foto-saya.png',
-  '/images/foto-saya-1.jpg',
-  '/images/foto-saya-2.jpg',
+  "/images/foto-saya.png",
+  "/images/foto-saya-1.jpg",
+  "/images/foto-saya-2.jpg",
+  "/images/foto-saya.png",
+  "/images/foto-saya-1.jpg",
+  "/images/foto-saya-2.jpg",
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center px-4 md:px-10 py-12">
-   
-
-
       {/* Main Content */}
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Kiri: Deskripsi Diri */}
@@ -31,7 +28,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 leading-tight tracking-tight">
             Halo, Perkenalkan saya <br />
             <TypingText
-              words={['Fajar Santoso']}
+              words={["Fajar Santoso"]}
               loop={1}
               cursorStyle="|"
               className="text-blue-600"
@@ -40,7 +37,7 @@ export default function Home() {
 
           <p className="text-xl sm:text-2xl font-semibold text-gray-700 tracking-wide">
             <TypingText
-              words={['Web Developer', 'UI/UX Designer', 'Frontend Developer']}
+              words={["Web Developer", "UI/UX Designer", "Frontend Developer"]}
               loop={true}
               cursorStyle="_"
               typeSpeed={30}
