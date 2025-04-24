@@ -19,10 +19,10 @@ export async function createProyek(data: IProyek) {
   });
 }
 
-export async function updateProyek(id: number, data: IProyek) {
-  return await prisma.proyek.update({
+export async function updateProyek(id: number, updatedData: { judul: string, deskripsi: string, footer: string, linkSitus: string, linkGithub: string, thumbnail?: string | null }) {
+  return prisma.proyek.update({
     where: { id },
-    data,
+    data: updatedData,
   });
 }
 
