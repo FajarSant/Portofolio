@@ -1,0 +1,27 @@
+{
+    "projects": [
+      {
+        "id": "1",
+        "judul": "Bursa Kerja Platform",
+        "deskripsi": "Website ini merupakan platform bursa kerja...",
+        "deskripsiSingkat": "Platform bursa kerja untuk pencari kerja dan perusahaan.",
+        "footer": "Bursa Kerja Platform 2024",
+        "linkSitus": "https://bursakerja.com",
+        "linkGithub": "https://github.com/user/bursakerja",
+        "dibuatPada": "2024-12-01",
+        "thumbnail": "/images/portfolio.jpg"
+      },
+      {
+        "id": "2",
+        "judul": "Sistem Manajemen Tugas",
+        "deskripsi": "Aplikasi untuk mengelola dan melacak tugas harian...",
+        "deskripsiSingkat": "Aplikasi manajemen tugas untuk meningkatkan produktivitas.",
+        "footer": "Sistem Manajemen Tugas 2025",
+        "linkSitus": "https://taskmanager.com",
+        "linkGithub": "https://github.com/user/taskmanager",
+        "dibuatPada": "2025-01-15",
+        "thumbnail": "/images/taskmanager.jpg"
+      }
+    ]
+  }
+  
